@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'iframe-resizer/js/iframeResizer.contentWindow'
+</script>
+
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <main class="container-fluid my-3">
+    <!-- <NuxtWelcome /> -->
+    <NuxtPage />
+  </main>
 </template>
