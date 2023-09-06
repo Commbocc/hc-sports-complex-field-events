@@ -21,7 +21,7 @@ export const useEvents = () => {
 
     try {
       const andClause = [
-        `ARRAYJOIN({LocationSlug}) = '${params.locationSlug}'`,
+        `ARRAYJOIN({LocationUid}) = '${params.locationUid}'`,
         `IS_AFTER({Date}, '${weekStartOn.minus({ days: 1 }).toISODate()}')`,
         `IS_BEFORE({Date}, '${weekEndOn.plus({ days: 1 }).toISODate()}')`,
       ].join(', ')
@@ -77,6 +77,6 @@ export class FieldEvent {
     this.name = _event.fields.Name!
     this.date = _event.fields.Date!
     this.field = _event.fields.FieldName?.[0] ?? ''
-    this.location = _event.fields.LocationSlug?.[0]!
+    this.location = _event.fields.LocationUid?.[0]!
   }
 }

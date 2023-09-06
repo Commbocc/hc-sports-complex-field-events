@@ -4,7 +4,7 @@ import 'iframe-resizer/js/iframeResizer.contentWindow'
 </script>
 
 <template>
-  <main class="container-fluid my-3">
+  <main class="container-fluid py-3">
     <!-- <NuxtWelcome /> -->
     <NuxtPage />
   </main>

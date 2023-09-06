@@ -6,7 +6,7 @@ interface IRawEvent {
     Date?: string
     Name?: string
     FieldName?: string[]
-    LocationSlug?: string[]
+    LocationUid?: string[]
     Created?: string
     'Created By'?: IAirtableUser
     'Last Modified'?: string

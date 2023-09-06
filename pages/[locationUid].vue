@@ -5,7 +5,9 @@ await fetchEvents()
 </script>
 
 <template>
-  <h1 v-if="events.loading">Loading...</h1>
+  <h3 v-if="events.loading">Loading...</h3>
+
+  <h3 v-else-if="!events.records.length">No events at this time</h3>
 
   <div v-else class="table-responsive">
     <table class="table table-sm table-bordered table-striped">
@@ -19,7 +21,7 @@ await fetchEvents()
         <tr v-for="(events, field) of groupedEvents">
           <th scope="row">{{ field }}</th>
           <td v-for="day in thisWeek" :data-cell="formatIso(day)">
-            {{ events.find((e) => e.date === day)?.name }}
+            {{ events.find((e) => e.date === day)?.name ?? 'All Day Rented' }}
           </td>
         </tr>
       </tbody>
