@@ -16,6 +16,8 @@ jobs:
         run: |
           yarn
           yarn generate
+        env:
+          AIRTABLE_READ_ONLY_KEY: ${{ secrets.AIRTABLE_READ_ONLY_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

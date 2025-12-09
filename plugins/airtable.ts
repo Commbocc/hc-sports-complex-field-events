@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { type AxiosInstance } from "axios";
 
 const TABLE_ID = `appNFrINNNMTc8GCn`;
 
@@ -14,7 +14,7 @@ const TABLE_ID = `appNFrINNNMTc8GCn`;
 const airtable: AxiosInstance = axios.create({
   baseURL: `https://api.airtable.com/v0/${TABLE_ID}`,
   headers: {
-    Authorization: `Bearer patCMqNApPrJE8SXi.143baa8db7f29e133b886a0c24776496d00671e7ac993231593b78a2cfe599a6`,
+    Authorization: `Bearer ${import.meta.env.VITE_AIRTABLE_READ_ONLY_KEY}`,
   },
 });
 
