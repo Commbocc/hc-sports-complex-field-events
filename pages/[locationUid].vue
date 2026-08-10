@@ -20,7 +20,10 @@ await fetchEvents();
         <tr v-for="(events, field) of groupedEvents">
           <th scope="row">{{ field }}</th>
           <td v-for="day in thisWeek" :data-cell="formatIso(day)">
-            {{ events.find((e) => e.date === day)?.name ?? "All Day Rented" }}
+            {{
+              events.find((e) => e.date === day)?.name ??
+              "Field Schedule Pending"
+            }}
           </td>
         </tr>
       </tbody>
