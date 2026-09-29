@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "hc-sports-complex-field-events",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -10,13 +10,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@types/luxon": "^3.3.2",
-    "nuxt": "^3.7.1"
+    "@types/luxon": "^3.7.5",
+    "nuxt": "^4.5.2"
   },
   "dependencies": {
-    "axios": "^1.5.0",
-    "bootstrap": "^5.3.1",
-    "iframe-resizer": "^4.3.6",
-    "luxon": "^3.4.2"
+    "axios": "^1.20.0",
+    "bootstrap": "^5.3.8",
+    "iframe-resizer": "^4.4.5",
+    "luxon": "^3.7.2"
   }
 }
